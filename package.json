@@ -1,0 +1,21 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Lev N",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
+}
+
+// @babel/core @babel/preset-env browser-sync gulp gulp-autoprefixer gulp-babel gulp-clean-css gulp-concat gulp-iconfont gulp-iconfont-css gulp-imagemin gulp-newer gulp-npm-dist gulp-rename gulp-rigger gulp-sass sass gulp-strip-comments gulp-uglify-es rimraf

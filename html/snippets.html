@@ -1,0 +1,102 @@
+<!-- HTML SNIPPETS -->
+
+<!-- Bootstrap Accordion -->
+<div class="tab">
+
+	<ul class="tab_nav nav" id="tab" role="tablist">
+		<li class="tab_nav--item">
+			<a class="tab_nav--link active" id="firstTab" data-toggle="tab" href="#first" role="tab" aria-controls="first" aria-selected="true">
+				TAB_1
+			</a>
+		</li>
+		<li class="tab_nav--item">
+			<a class="tab_nav--link" id="secondTab" data-toggle="tab" href="#second" role="tab" aria-controls="second" aria-selected="false">
+				TAB_2
+			</a>
+		</li>
+		<li class="tab_nav--item">
+			<a class="tab_nav--link" id="thirdTab" data-toggle="tab" href="#third" role="tab" aria-controls="third" aria-selected="false">
+				TAB_3
+			</a>
+		</li>
+	</ul>
+
+	<div class="tab_pane tab-content" id="tabContent">
+
+		<div class="tab_pane--item tab-pane fade show active" id="first" role="tabpanel" aria-labelledby="firstTab">
+			TAB_1
+		</div>
+
+		<div class="tab_pane--item tab-pane fade" id="second" role="tabpanel" aria-labelledby="secondTab">
+			TAB_2
+		</div>
+
+		<div class="tab_pane--item tab-pane fade" id="third" role="tabpanel" aria-labelledby="thirdTab">
+			TAB_3
+		</div>
+
+	</div>
+
+</div>
+<!-- -->
+
+<!-- Form -->
+<form action="#" class="feedback_form">
+	<div class="feedback_form--title">TITLE</div>
+
+	<div class="feedback_form--group form_group">
+		<label for="feedbackName" class="form_group--label">NAME</label>
+		<input type="text" name="feedback-name" id="feedbackName" class="form_group--control control" placeholder="NAME" required>
+	</div>
+
+	<div class="feedback_form--group form_group">
+		<label for="feedbackContact" class="form_group--label">CONTACT</label>
+		<input type="text" name="feedback-contact" id="feedbackContact" class="form_group--control control js-contact-input" placeholder="CONTACT" required>
+	</div>
+
+	<div class="feedback_form--group form_group form_group-select">
+		<label for="feedbackSelect" class="form_group--label">SELECT</label>
+		<select class="feedback_form--control control control-select js-select" name="feedback-select" id="feedbackSelect">
+			<option value="option_all">OPTION_ALL</option>
+			<option value="option_1">OPTION_1</option>
+			<option value="option_2">OPTION_2</option>
+			<option value="option_3">OPTION_3</option>
+			<option value="option_4">OPTION_4</option>
+			<option value="option_5">OPTION_5</option>
+		</select>
+	</div>
+
+	<div class="feedback_form--group form_group form_group-textarea">
+		<label for="feedbackText" class="form_group--label">TEXT</label>
+		<textarea name="feedback-text" id="feedbackText" class="form_group--control control control-textarea" placeholder="TEXT"></textarea>
+	</div>
+
+	<div class="feedback_form--captcha captcha">
+		<div class="captcha--title">Введите код с картинки:</div>
+		<img src="./img/captcha-1.png" alt="Капча" class="captcha--img">
+		<input type="text" class="captcha--control control">
+	</div>
+
+	<div class="feedback_form--footer feedback_form--footer-side">
+
+		<div class="feedback_form--group feedback_form--group-checkbox checkbox">
+			<input type="checkbox" class="checkbox--input" id="formPrivacy" required>
+			<label class="checkbox--label" for="formPrivacy">Я принимаю <a href="#">политику конфиденциальности</a> и соглашаюсь с обработкой моих персональных данных</label>
+		</div>
+
+		<div class="feedback_form--submit">
+			<button type="submit" class="but">Отправить</button>
+		</div>
+
+	</div>
+
+</form>
+<!-- -->
+
+<!-- Responsive picture -->
+<picture class="block--element block">
+	<!-- <source type="image/webp" srcset="#"> -->
+	<!-- <source type="image/jpeg" srcset="<?= $jpeg_url ?>"> -->
+	<source media="(min-width:650px)" srcset="URL">
+	<img src="SRC" alt="ALT" title="TITLE" class="block--element">
+</picture>

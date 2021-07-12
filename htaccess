@@ -1,0 +1,14 @@
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule xmlrpc\.php$ - [F,L]
+
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
+
+Redirect 301 /novosti/trubnoe-delo-usoxlo-do-milliona https://gk-rosmet.ru/novosti/trubnoe-delo-usohlo-do-milliona-2/

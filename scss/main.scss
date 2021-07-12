@@ -1,0 +1,108 @@
+// Main SCSS File
+	@import "./include/_mixin.scss";
+	@import "./include/default.scss";
+
+// Vars
+	$white: #FFF;
+	$black: #000;
+	$primary: blue;
+
+	$font-title: Helvetica, Arial, sans-serif; 
+	$font-text: Helvetica, Arial, sans-serif; 
+
+	::-moz-selection { background: lighten($primary, 25%); }
+	::selection { background: lighten($primary, 25%); }
+
+// Typography, Links, Buttons
+	html, body {
+		font: normal 16px $font-text;
+		color: $black;
+		background: $white;
+	}
+
+	@for $index from 1 through 6 {
+		h#{$index} {
+			margin-top: 0;
+			font-family: $font-title;
+		}
+	}
+
+	.link {
+		color: $primary;
+		transition: .2s;
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+			color: darken($primary, 10%);
+		}
+		&-alt {
+			color: $white;
+			&:hover {
+				color: darken($white, 15%);
+			}
+		}
+	}
+
+	a {
+		@extend .link;
+	}
+
+// Vendor
+	// WP
+	.admin-bar {
+		.fixed_block {
+			margin-top: 46px;
+			@media ($md) {
+				margin-top: 32px;
+			}
+		}
+	}
+
+// Common
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		overflow: hidden;
+		&--content {
+			flex-grow: 1;
+		}
+	}
+
+// Header
+
+// Footer
+
+// Widget
+
+// Page
+
+// Preloader
+	.loader {
+		position: fixed;
+		top: 0; right: 0; bottom: 0; left: 0;
+		z-index: 9999;
+		background: #FFF;
+	}
+
+	.loader--inner {
+		position: absolute;
+		width: 64px;
+		height: 64px;
+		top: calc(50% - 32px); left: calc(50% - 32px);
+	}
+
+// Debug
+	.kint-rich {
+		position: fixed;
+		top: 0; left: 0;
+		width: 100%;
+		height: auto;
+		z-index: 9999;
+	}
+
+
+
+
+
+

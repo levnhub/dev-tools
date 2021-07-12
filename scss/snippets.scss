@@ -1,0 +1,403 @@
+// CSS SNIPPETS
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+// Menu item underline
+	.menu-link:after {
+		background-color: $yellow;
+		display: block;
+		content: "";
+		height: 1px;
+		width: 0%;
+		left:50%;
+		position:absolute;
+		transition: width .3s ease-in-out;
+		@include translate (-50%, 0);
+	}
+	.menu-link:hover:after,
+	.menu-link:focus:after {
+		width: 100%;
+	}
+
+// Hide Safari man in input field
+	input::-webkit-contacts-auto-fill-button {
+		visibility: hidden;
+		display: none !important;
+		pointer-events: none;
+		position: absolute;
+		right: 0;
+	}
+
+// Animation
+	
+	@keyframes spin {
+		0% {
+			transform: rotate(0);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes blink {
+	  0% { opacity: 1; }
+	  50% { opacity: 0; }
+	  100% { opacity: 1; }
+	}
+
+	@keyframes bounce-once {
+	  16.65% { transform: translateY(-8px); }
+	  33.3% { transform: translateY(0); }
+	  49.95% { transform: translateY(-4px); }
+	  66.6% { transform: translateY(0); }
+	  83.25% { transform: translateY(-1px); }
+	  100% { transform: translateY(0); }
+	}
+
+	@keyframes bounce-short {
+	  1.65% { transform: translateY(-8px); }
+	  3.3% { transform: translateY(0); }
+	  4.95% { transform: translateY(-4px); }
+	  6.6% { transform: translateY(0); }
+	  8.25% { transform: translateY(-1px); }
+	  10% { transform: translateY(0); }
+	  100% { transform: translateY(0); }
+	}
+
+	@keyframes rotate-short {
+	  0% { transform: rotate(0); }
+	  3.33% { transform: rotate(-20deg); }
+	  6.66% { transform: rotate(20deg); }
+	  10% { transform: rotate(0); }
+	  100% { transform: rotate(0); }
+	}
+
+	@keyframes rotate-once {
+	  0% { transform: rotate(0); }
+	  100% { transform: rotate(180deg); }
+	}
+
+	@keyframes rotate-fast {
+	  0% { transform: rotate(0); }
+	  100% { transform: rotate(360deg); }
+	}
+
+	@keyframes dir-down {
+	  0% {
+	    transform: translateY(0);
+	  }
+	  20% {
+	    transform: translateY(15%);
+	  }
+	  100% {
+	    transform: translateY(0);
+	  }
+	}
+
+	.anim-spin {
+		animation-name: spin;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+		transform-origin: center;
+		animation-duration: 700ms;
+	}
+
+	.anim-bounce-short {
+	  animation-name: bounce-short;
+	  animation-timing-function: ease-in-out;
+	  animation-iteration-count: infinite;
+	  animation-duration: 8s;
+	}
+
+	.anim-bounce-once {
+	  animation-name: bounce-once;
+	  animation-timing-function: ease-in-out;
+	  animation-iteration-count: 1;
+	  animation-delay: 3s;
+	  animation-duration: 1s;
+	}
+
+	.anim-rotate-short {
+	  animation-name: rotate-short;
+	  animation-timing-function: ease-in-out;
+	  animation-iteration-count: infinite;
+	  animation-duration: 8s;
+	}
+
+	.anim-rotate-once {
+	  animation-name: rotate-once;
+	  animation-timing-function: ease-in-out;
+	  animation-iteration-count: 1;
+	  animation-delay: 3s;
+	  animation-duration: 1s;
+	}
+
+	.anim-rotate-fast {
+	  animation-name: rotate-fast;
+	  animation-timing-function: ease-in-out;
+	  animation-iteration-count: infinite;
+	  animation-delay: 0;
+	  animation-duration: 1s;
+	}
+
+	.anim-button-bounce {
+	  &:hover, &:focus, &:active {
+	    opacity: 1;
+	    animation-name: bounce;
+	    animation-duration: .6s;
+	    animation-timing-function: ease-in-out;
+	    animation-iteration-count: 1;
+	  }
+	}
+
+	.anim-blink {
+	  animation-name: blink;
+	  animation-duration: 1s;
+	  animation-timing-function: ease-in-out;
+	  animation-iteration-count: infinite;
+	}
+
+	.anim-blink-slow {
+	  animation-name: blink;
+	  animation-duration: 2s;
+	  animation-timing-function: ease-in-out;
+	  animation-iteration-count: infinite;
+	}
+
+	.anim-dir-down {
+	  animation-name: dir-down;
+	  animation-duration: 1.5s;
+	  animation-timing-function: ease;
+	  animation-iteration-count: infinite;
+	}
+
+// Vendor
+	// WP Pagination Style
+		.pagination {
+			// block style
+			.screen-reader-text {
+				display: none;
+			}
+			.nav-links {
+				// list style
+				.page-numbers {
+					// item style
+					&.current {
+						// current item style
+					}
+					&.dots { pointer-events: none; }
+				}
+				a.page-numbers {
+					// link style
+					&:hover {
+						// link hover
+					}
+				}
+			}
+		}
+
+// Fancybox
+	.fancybox-gal {
+		.fancybox-bg {
+			background: white;
+		}
+	}
+
+	.fancybox-modal {
+		.fancybox-bg {
+			background: gray;
+		}
+	}
+
+	.fancybox-button {
+		background-color: transparent;
+		color: black;
+		padding: 0;
+		font-size: 24px;
+		&:hover {
+			color: red;
+		}
+	}
+
+	.fancybox-close-small {
+		font-size: 20px;
+		color: gray !important;
+		top: .5rem !important;
+		right: .5rem !important;
+		@media ($lg) {
+			top: 1.5rem !important;
+			right: 1rem !important;
+		}
+	}
+
+// SLick Slides Vertical Center
+	.slick-slide::before {
+		content: '';
+		display: inline-block;
+		height: 90px; // Fixed height only x(
+		vertical-align: middle;
+	}
+
+	.slick-slide div {
+		vertical-align: middle;
+		display: inline-block;
+	}
+
+	.slick-track {
+		height: 100%;
+	}
+
+// Reset Forms
+	select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		outline: 0;
+		box-shadow: none;
+		border: 0 !important;
+		background: white; 
+		background-image: none;
+	}
+	select::-ms-expand {
+		display: none;
+	}
+	input, textarea {
+		appearance: none;
+		box-shadow: none;
+		outline: 0;
+		border: 0;
+		background: white; 
+		background-image: none;
+		border-radius: 0;
+	}
+
+// Chosen Reset
+	.chosen-container {
+		width: 100%;
+		min-height: 100%;
+		.chosen-drop {
+			padding: 0;
+			border: 0 !important;
+			border-top-width: 0;
+			.chosen-results {
+				padding: 0;
+				.active-result {
+					padding: 10px;
+					&.highlighted {
+						color: $black;
+						background: lighten($red, 37%);
+					}
+				}
+			}
+		}
+	}
+	.chosen-container-active.chosen-with-drop {
+		.chosen-single {
+			border: 0;
+			box-shadow: 0 1px 5px rgba(0,0,0,.15);
+			border-radius: 3px 3px 0 0;
+			background: $white;
+			&:after {
+				content: '▲';
+			}
+		}
+	}
+	.chosen-container-single .chosen-single {
+		position: absolute;
+		width: 100%;
+		min-height: 100%;
+		height: auto;
+		border: 0;
+		border-radius: 3px;
+		box-shadow: none;
+		padding: 7px 12px;
+		background: $white;
+		&:after {
+			content: '▼';
+			font-size: 9px;
+			position: absolute;
+			top: 20%; right: 15px;
+		}
+	}
+
+// Custom Checkbox
+	.checkbox {
+		position: relative;
+		display: block;
+		min-height: 1.5rem;
+		padding-left: 2rem;
+	}
+	.checkbox--input {
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+	}
+	.checkbox--label {
+		position: relative;
+		padding-top: .1em;
+		margin-bottom: 0;
+		vertical-align: top;
+		cursor: pointer;
+	}
+	.checkbox--label::before {
+		position: absolute;
+		top: 0;
+		left: -2rem;
+		display: block;
+		width: 1.2rem;
+		height: 1.2rem;
+		pointer-events: none;
+		content: '';
+		background-color: $white;
+		border: #e6e7e8 solid 1px;
+		border-radius: 2px;
+		transition: background .2s;
+	}
+	.checkbox--label::after {
+		position: absolute;
+		top: 0;
+		left: -2.5rem;
+		display: block;
+		width: 2.2rem;
+		height: 1.3rem;
+		content: '';
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 50% 50%;
+	}
+	.checkbox--input:checked~.checkbox--label::before {
+		background-color: $red;
+		border-color: $red;
+	}
+	.checkbox--input:checked~.checkbox--label::after {
+		background-image: url('../svg/check.svg');
+	}
+
+// Picture aspect ratio
+picture {
+		position: relative;
+		padding-top: 100%; // 1:1
+    padding-top: 56.25%; // 16:9
+    padding-top: 75%; // 4:3
+    padding-top: 66.66%; // 3:2
+    padding-top: 62.5%; // 8:5
+    img {
+    	position: absolute;
+    	top: 0; right: 0; bottom: 0; left: 0;
+    }
+}
+
+
+
+
+
+
+
+
+

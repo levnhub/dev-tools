@@ -1,0 +1,15 @@
+
+/* Tilda media queries */
+
+@media screen and (max-width: 1200px) {
+	/* Tablet Horizontal */
+}
+@media screen and (max-width: 960px) {
+	/* Tablet Vertical */
+}
+@media screen and (max-width: 640px) {
+	/* Mobile Horizontal */
+}
+@media screen and (max-width: 480px) {
+	/* Mobile Vertical */
+}
