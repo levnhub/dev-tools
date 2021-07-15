@@ -393,6 +393,30 @@ picture {
     }
 }
 
+// Loading placeholder
+@keyframes placeholder {
+  0% {
+    background: $lighter;
+  }
+  50% {
+    background: $light;
+  }
+  100% {
+    background: $lighter;
+  }
+}
+
+.anim-placeholder {
+  background: $lighter;
+  animation-name: placeholder;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  &.active {
+    background: transparent;
+    animation: none;
+  }
+}
 
 
 

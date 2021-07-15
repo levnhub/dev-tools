@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Yandex Map</title>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=9494de5c-ffa1-4706-933b-f77adfeece7b"></script>
+	<style>
+		.content--ymap {
+			width: 500px;
+			height: 500px;
+		}
+	</style>
+</head>
+<body>
+	<div id="yandexMap" class="content--ymap anim-placeholder"></div>
+		<script type="text/javascript">
+
+				ymaps.ready(init);
+
+				function init() {
+					var myMap = new ymaps.Map("yandexMap", {
+							center: [59.93, 30.31],
+							zoom: 9,
+							controls: ['smallMapDefaultSet']
+					});
+
+					myMap.behaviors.disable(['scrollZoom']);
+				}
+		</script>
+</body>
+</html>

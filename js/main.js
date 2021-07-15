@@ -5,7 +5,7 @@ $ = jQuery; // WP only
 //= './include/jquery.hyphen.ru.js'
 
 // Main JS File
-$(document).ready(function () {
+$(document).on('ready', function () {
 
 // Ready
 	console.log('jQuery Ready!');
@@ -23,8 +23,8 @@ $(document).ready(function () {
 }); // Ready end
 
 // Prevent Scroll to Top
-	$('a[href*="#"]').click(function($e) {
-			$e.preventDefault();
+	$('a[href*="#"]').on('click', function(e) {
+			e.preventDefault();
 	});
 
 // ...

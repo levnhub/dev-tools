@@ -459,3 +459,33 @@
 		$params['orderby']['enum'][] = 'menu_order';
 		return $params;
 	}
+
+// Match & replace content pdf links
+
+	add_filter('the_content', 'lnd_content_filter');
+	function lnd_content_filter( $content ){
+		$is_match = preg_match_all('/\<a.*pdf.*a\>/', $content, $matches, PREG_SET_ORDER);
+
+		if ( $is_match > 0 ) {
+			foreach ( $matches as $match ) {
+				$replaced = str_replace( '<a', '<a class="doc_content"', $match );
+				$content = str_replace( $match, $replaced, $content );
+			}
+		}
+		return $content;
+	}
+
+// Redirect
+
+	add_action( 'template_redirect', 'lnd_seo_template_redirect');
+	function lnd_seo_template_redirect() {
+
+		$uri = $_SERVER['REQUEST_URI'];
+
+		if ($uri == "/ob-organizaczii/"){
+
+			wp_redirect( '/ob-organizaczii/osnovnye-svedeniya/', 301 );
+			exit;
+
+		}
+	}
