@@ -18,6 +18,11 @@ const iconfontCss = require('gulp-iconfont-css');
 const iconfontFont = require('gulp-iconfont');
 const runTimestamp = Math.round(Date.now()/1000);
 
+// Assets
+function npm2dist() {
+  return src(npmDist(), { base: './node_modules/' }).pipe(dest('assets'));
+}
+
 // PHP
 	function php() {
 		return src('**/*.php')

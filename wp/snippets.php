@@ -8,7 +8,7 @@ $clean_number = str_replace( array(' ', '-', '(', ')'), '', $phone_number );
 
 <?php // Clean tel func() 
 
-function clean_tel( $tel )
+function lnd_clean_tel( $tel )
 {
 	$tel = str_replace( array(' ', '-', '(', ')'), '', $tel );
 	return $tel;

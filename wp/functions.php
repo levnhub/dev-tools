@@ -7,6 +7,7 @@
 // Global constant vars
 
 	define('MC_SITE_URL', get_bloginfo('url'));
+	define('MC_ADMIN_EMAIL', get_bloginfo('admin_email'));
 	define('MC_TEMPLATE_URL', get_template_directory_uri());
 	define('MC_TEMPLATE_DIR', get_template_directory());
 	define('MC_IMAGE_URL', MC_TEMPLATE_URL . '/img');
