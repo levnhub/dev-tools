@@ -2,7 +2,7 @@
 
 Some starter work files
 
-## Usefull glyps
+## Usefull glyphs
 
 ✕ ✖ ∗ • ◀ ▶ ▲ ▼
 

@@ -11,10 +11,10 @@ get_header(); ?>
 		<!-- Title -->
 	</div>
 	<div class="content--body">
-		<aside class="content--aside">
+		<div class="content--aside">
 			<!-- Sidebar -->
-		</aside>
-		<main class="content--main">
+		</div>
+		<div class="content--main">
 			<!-- Content -->
 		</main>
 	</div>

@@ -94,7 +94,8 @@ function npm2dist() {
 				fontName: 'iconfont',
 				path: 'icon/_icon.css',
 				targetPath: 'stylesheet.css',
-				fontPath: ''
+				fontPath: '',
+				cacheBuster: `?v=${runTimestamp}`,
 			}))
 			.pipe(iconfontFont({
 				fontName: 'iconfont',

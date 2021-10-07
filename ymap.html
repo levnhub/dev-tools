@@ -25,6 +25,20 @@
 							controls: ['smallMapDefaultSet']
 					});
 
+					myGeoObject = new ymaps.GeoObject({
+						geometry: {
+								type: "Point",
+								coordinates: [59.965029, 30.239587]
+						},
+						properties: {
+							iconCaption: 'Подпись',
+							hintContent: 'Сноска',
+						}
+					}, {
+						preset: 'islands#blueDotIcon',
+					});
+
+					myMap.geoObjects.add(myGeoObject);
 					myMap.behaviors.disable(['scrollZoom']);
 				}
 		</script>

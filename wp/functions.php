@@ -19,6 +19,15 @@
 		@ ini_set( 'display_errors', 1 );
 	}
 
+// CORS localhost allow
+
+	if ( stripos($_SERVER['SERVER_NAME'], 'localhost') ) {
+		add_action('init','add_cors_http_header');
+		function add_cors_http_header(){
+			header("Access-Control-Allow-Origin: *");
+		}
+	}
+
 // Remove unuseful
 
 	add_action('wp_loaded', function () {
@@ -48,10 +57,13 @@
 	add_filter('wpseo_prev_rel_link', '__return_false');
 	add_filter('wpseo_next_rel_link', '__return_false');
 
-// Remove type attribute from scripts & styles links
+// Setup theme
 
 	add_action('after_setup_theme', function() {
+		add_theme_support( 'menus' );
+		add_theme_support( 'post-thumbnails', array( 'post' ) );
 		add_theme_support( 'html5', [ 'script', 'style' ] );
+		add_image_size( 'small', 225, 225 );
 	});
 
 // Disable annoying Yoast SEO admin notifications
@@ -224,6 +236,16 @@
 		// список параметров: http://wp-kama.ru/function/get_taxonomy_labels
 	}
 
+// Reorder Posts menu
+
+	add_action('admin_menu', 're_order_menu');
+	function re_order_menu () {
+		global $menu;
+		$posts = $menu[5];
+		unset($menu[5]);
+		$menu[7] = $posts;
+	}
+
 // Register actual jQuery
 
 	add_action( 'wp_enqueue_scripts', 'jQuery_scripts', 1 );
@@ -280,14 +302,6 @@
 		wp_enqueue_script( 'admin-script', $url . '/js/admin.min.js', array(), filemtime($dir . '/js/admin.min.js'), true );
 
 	}
-
-// Post thumbnails
-
-	add_theme_support( 'post-thumbnails', array( 'post' ) );
-
-// Theme menu
-
-	add_theme_support( 'menus' );
 
 // Регистрируем боковые панели
 	function sidebar_init() {

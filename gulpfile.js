@@ -112,7 +112,8 @@ const runTimestamp = Math.round(Date.now()/1000);
 				fontName: 'iconfont',
 				path: 'app/icon/_icon.css',
 				targetPath: 'stylesheet.css',
-				fontPath: ''
+				fontPath: '',
+				cacheBuster: `?v=${runTimestamp}`,
 			}))
 			.pipe(iconfontFont({
 				fontName: 'iconfont',

@@ -100,3 +100,58 @@
 	<source media="(min-width:650px)" srcset="URL">
 	<img src="SRC" alt="ALT" title="TITLE" class="block--element">
 </picture>
+
+
+<!-- To top button -->
+<style>
+	.up {
+		position: fixed;
+		width: 50px;
+		height: 50px;
+		left: -50px; bottom: 50px;
+		transition: all .2s;
+		background: blue;
+		background-size: 22px 12px;
+		border-radius: 5px;
+		z-index: 200;
+	}
+	.up:hover {
+		color: white;
+		background: navy;
+	}
+	.up-active {
+		left: 50px;
+	}
+</style>
+<button type="button" class="up js-up">
+	<svg width="26px" height="16px" viewBox="0 0 26 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.8" stroke-linecap="round" stroke-linejoin="round">
+					<g id="Arr-2" transform="translate(-12.000000, -16.000000)" stroke="#FFFFFF" stroke-width="3">
+							<g id="Arrow-1-Copy-3">
+									<polyline transform="translate(25.000000, 24.000000) rotate(-90.000000) translate(-25.000000, -24.000000) " points="19 13 31 24 19 35"></polyline>
+							</g>
+					</g>
+			</g>
+	</svg>
+</button>
+<script>
+	// Scroll to Top
+	// Show scroll button
+	$(window).on('scroll', function() {
+    // if ( $(this).scrollTop() >= 1000 && $(this).width() >= 996 ) { // for desktop/mobile only
+    if ( $(this).scrollTop() >= 1000 ) {
+    	$('.js-up').addClass('up-active');
+    } else {
+    	$('.js-up').removeClass('up-active');
+    }
+  });
+
+	// Scroll button click event
+	$('.js-up').on('click', function() {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		});
+	});
+</script>
+<!-- To top button -->
