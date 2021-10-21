@@ -11,7 +11,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="format-detection" content="telephone=no">
-	<meta name="description" content="<?php bloginfo( 'description' ); ?>">
 	<meta name="author" content="Lev & Dev">
 	<meta name="publisher" content="https://t.me/levndev">
 	
@@ -25,7 +24,7 @@
 	<meta name="msapplication-TileColor" content="#FFFFFF">
 	<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/favicon/favicon-270.png">
 
-	<title><?php bloginfo( 'title' ); ?></title>
+	<title><?php the_title() ?></title>
   
   <?php wp_head(); ?>
 </head>

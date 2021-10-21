@@ -5,17 +5,23 @@
  */
 get_header(); ?>
 
-<article class="wrapper--content content">
+<div class="wrapper--content content">
 
 	<div class="content--header">
 		<!-- Title -->
 	</div>
 	<div class="content--body">
-		<div class="content--aside">
+		<aside class="content--aside">
 			<!-- Sidebar -->
-		</div>
-		<div class="content--main">
+		</aside>
+		<main class="content--main">
 			<!-- Content -->
+			<article class="content--article">
+				<!-- Content Article -->	
+			</article>
+			<section class="content--section">
+				<!-- Content Section -->
+			</section>
 		</main>
 	</div>
 	<div class="content--footer">

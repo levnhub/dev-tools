@@ -377,16 +377,6 @@
 	    return $links;
 	};
 
-// Fill alt attribute by image title
-	add_filter( 'wp_prepare_attachment_for_js', 'change_empty_alt_to_title' );
-	function change_empty_alt_to_title( $response ) {
-		if ( ! $response['alt'] ) {
-			$response['alt'] = sanitize_text_field( $response['title'] );
-		}
-
-		return $response;
-	}
-
 // Уберём метабокс Ninja Forms
 	add_action('add_meta_boxes', function() {
 	    remove_meta_box('nf_admin_metaboxes_appendaform', ['page', 'post'], 'side');
