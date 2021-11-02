@@ -47,6 +47,44 @@
 		@extend .link;
 	}
 
+	.icon {
+		line-height: 1em;
+		height: 1em;
+	}
+
+	.picture {
+		position: relative;
+		display: flex;
+		&--img {
+			min-width: 100%;
+			min-height: 100%;
+			object-fit: cover;
+			object-position: center;
+			font-family: 'object-fit: cover; object-position: bottom;'; // IE 11 Polyfill 
+			/* (https://github.com/bfred-it/object-fit-images) */
+		}
+	}
+
+	.table {
+		display: table;
+		width: 100%;
+		&--thead {
+			display: table-header-group;
+		}
+		&--tbody {
+			display: table-row-group;
+		}
+		&--tfoo {
+			display: table-footer-group;
+		}
+		&--tr {
+			display: table-row;
+		}
+		&--td {
+			display: table-cell;
+		}
+	}
+
 // Vendor
 	// WP
 	.admin-bar {

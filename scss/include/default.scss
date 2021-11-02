@@ -98,6 +98,21 @@
 	input::-webkit-inner-spin-button {
 		appearance: none;
 	}
+
+	select {
+	  -webkit-appearance: none;
+	  -moz-appearance: none;
+	  -ms-appearance: none;
+	  appearance: none;
+	  outline: 0;
+	  box-shadow: none;
+	  border: 0;
+	  background: white;
+	  background-image: none;
+	}
+	select::-ms-expand {
+	  display: none;
+	}
 	
 	picture {
 		display: block;
@@ -108,47 +123,9 @@
 		overflow: hidden;
 	}
 
-	.picture {
-		position: relative;
-		display: flex;
-		&--img {
-			min-width: 100%;
-			min-height: 100%;
-			object-fit: cover;
-			object-position: center;
-			font-family: 'object-fit: cover; object-position: bottom;'; // IE 11 Polyfill 
-			/* (https://github.com/bfred-it/object-fit-images) */
-		}
-	}
-
-	.table {
-		display: table;
-		width: 100%;
-		&--thead {
-			display: table-header-group;
-		}
-		&--tbody {
-			display: table-row-group;
-		}
-		&--tfoo {
-			display: table-footer-group;
-		}
-		&--tr {
-			display: table-row;
-		}
-		&--td {
-			display: table-cell;
-		}
-	}
-
 	.__web-inspector-hide-shortcut__ {
 		display: none !important;
 	}
-
-	.icon {
-		line-height: 1em;
-	}
-
 
 // Media like BS4
 	$sm: 'min-width: 576px';
