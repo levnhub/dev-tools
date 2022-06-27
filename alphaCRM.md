@@ -152,3 +152,6 @@ user_id - ID пользователя, от имени которого буде
 Все доступные на данный момент модели в API на скриншоте: http://joxi.ru/GrqjngPiGNEq9m 
 
 По вопросам API можно писать на почту: dev@alfacrm.pro 
+
+Привязанные Уроки к Группе
+Пример запроса: https://test.s20.online/v2api/1/calendar/group?id=7&date1=2022-01-01&date2=2022-12-31

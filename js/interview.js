@@ -201,7 +201,7 @@ console.log('script start'); // 1
 
 setTimeout(function () {
   console.log('setTimeout'); // 5
-}, 0); // (min timeOut === 4 ms)
+}, 0); // (min timeOut === 4 ms, becouse this go to end of Event Loop
 
 Promise.resolve()
   .then(function () {

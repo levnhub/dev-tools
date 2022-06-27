@@ -1,6 +1,6 @@
 .DS_store
 /node_modules
+/build
 /_*
 /dist
-package-lock.json
 sftp-config.json
