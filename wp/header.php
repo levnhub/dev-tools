@@ -23,7 +23,7 @@
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/favicon/favicon-152x152.png">
 	<meta name="theme-color" content="#00475d">
 	<meta name="msapplication-TileColor" content="#FFFFFF">
-	<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/favicon/favicon-270.png">
+	<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/favicon/favicon-270x270.png">
 
 	<title><?php the_title() ?></title>
   
