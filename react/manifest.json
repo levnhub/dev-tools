@@ -1,0 +1,35 @@
+{
+	"short_name": "Application",
+	"name": "React Application",
+	"icons": [
+		{
+			"src": "favicon/favicon.ico",
+			"sizes": "64x64 32x32 24x24 16x16",
+			"type": "image/x-icon"
+		},
+		{
+			"src": "favicon/favicon-16x16.png",
+			"type": "image/png",
+			"sizes": "16x16"
+		},
+		{
+			"src": "favicon/favicon-76x76.png",
+			"type": "image/png",
+			"sizes": "76x76"
+		},
+		{
+			"src": "favicon/favicon-192x192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "favicon/favicon-512x512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#DA4038",
+	"background_color": "#ffffff"
+}
