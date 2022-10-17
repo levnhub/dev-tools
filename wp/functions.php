@@ -494,3 +494,11 @@
 
 		}
 	}
+
+// Register user meta field
+
+	register_meta('user', 'refresh_token', [
+		'type' => 'string',
+		'single' => true,
+		'show_in_rest' => true,
+	]);

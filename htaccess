@@ -12,3 +12,7 @@ RewriteRule . /index.php [L]
 # END WordPress
 
 Redirect 301 /novosti/trubnoe-delo-usoxlo-do-milliona https://gk-rosmet.ru/novosti/trubnoe-delo-usohlo-do-milliona-2/
+
+<IfModule mod_rewrite.c>
+Header set Access-Control-Allow-Origin "*"
+</IfModule>
