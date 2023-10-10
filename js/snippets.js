@@ -6,19 +6,20 @@ Date.now(); // returns the number of milliseconds
 
 // Strip HTML tags
 
-String.replace(/(<([^>]+)>)/gi, "")
+String.replace(/(<([^>]+)>)/gi, '');
 
 // JS media queries
-	function mediaQueryWatch(mediaWidth) {
-		if (mediaWidth.matches) { // If media query matches
-			// Mobile
-			document.body.style.backgroundColor = "yellow";
-		} else {
-			// Desktop
-			document.body.style.backgroundColor = "pink";
-		}
-	}
+function mediaQueryWatch(mediaWidth) {
+  if (mediaWidth.matches) {
+    // If media query matches
+    // Mobile
+    document.body.style.backgroundColor = 'yellow';
+  } else {
+    // Desktop
+    document.body.style.backgroundColor = 'pink';
+  }
+}
 
-	var mediaWidth = window.matchMedia("(max-width: 996px)")
-	mediaQueryWatch(mediaWidth) // Call listener function at run time
-	mediaWidth.addListener(mediaQueryWatch) // Attach listener function on state changes
+var mediaWidth = window.matchMedia('(max-width: 996px)');
+mediaQueryWatch(mediaWidth); // Call listener function at run time
+mediaWidth.addListener(mediaQueryWatch); // Attach listener function on state changes
